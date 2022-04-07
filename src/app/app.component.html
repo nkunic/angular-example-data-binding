@@ -1,5 +1,5 @@
-<app-message></app-message>
-<app-message></app-message>
-<app-message></app-message>
-
-{{ messages | json }}
+<app-message 
+  *ngFor="let message of messages" 
+  [InnerMessage]="message"
+  (outerMessage)="print($event)">
+</app-message>
